@@ -36,11 +36,7 @@ $desPays = getAllCountries();
          <tr>
            <th>Nom</th>
            <th>Population</th>
-           <th>President</th>
-           <th>Surface</th>
-           <th>Region</th>
-           <th>Capitale</th>
-           <th>Detail</th>
+           
          </tr>
         </thead>
         <tbody>
@@ -50,13 +46,8 @@ $desPays = getAllCountries();
           foreach($desPays as $pays) : ?>
           <tr>
             <td> <?php echo $pays->Name ?></td> 
-            <td> <?php echo $pays->Population ?></td>
-            <td> <?php echo $pays->HeadOfState ?></td>
-            <td> <?php echo $pays->SurfaceArea ?></td>
-            <td> <?php echo $pays->Region ?></td>
-            <td> <?php echo $pays->Capital ?></td>
-            <td><a href="details.php?country=<?php echo($pays->Name); ?>">Voir information</a></td>
-            </tr>
+            <
+            
 
           </tr>
           <?php endforeach; ?>
@@ -69,9 +60,3 @@ $desPays = getAllCountries();
 require_once 'javascripts.php';
 require_once 'footer.php';
 ?>
- 
-
-
-
-
-  

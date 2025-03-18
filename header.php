@@ -33,6 +33,10 @@
         font-size: 3.5rem;
       }
     }
+    .dropdown-menu{
+max-height: 400px;
+overflow-y: auto;
+}
   </style>
   <!-- Custom styles for this template -->
   <link href="css/custom.css" rel="stylesheet">
@@ -49,7 +53,7 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index2.php">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Langues</a>
@@ -61,21 +65,39 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-             aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-             aria-expanded="false">Continents</a>
-        <div class="dropdown-menu" aria-labelledby="continentDropdown">
-        <a class="dropdown-item" href="continets.php?continent=Europe">Europe</a>
-        <a class="dropdown-item" href="continets2.php?continent=Africa">Africa</a>
-        <a class="dropdown-item" href="continets1.php?continent=North America">North America</a>
-        <a class="dropdown-item" href="continets3.php?continent=Oceania">Oceania</a>
+             aria-expanded="false">Continent</a>
+          
+          <ul class="dropdown-menu">
+<li><a href="continets.php?name=Asia">Asie</a></li>
+<li><a href="continets.php?name=Europe">Europe</a></li> 
+<li><a href="continets.php?name=Africa">Afrique</a></li>
+<li><a href="continets.php?name=North America">Amérique du Nord</a></li>
+<li><a href="continets.php?name=South America">Amérique du Sud</a></li>
+<li><a href="continets.php?name=Oceania">Océanie</a></li>
+<li><a href="continets.php?name=Antarctica">Antartic</a></li>
+</ul>
+<?php
+require_once 'inc/manager-db.php';
+$lesContinents = getContinent() ;
+$lesPays = getAllCountries();
+1
+//var_dump($lesContinents);
+?>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-
+toggle="dropdown" aria-haspopup="true"
+aria-expanded="false">Pays</a>
+<div class="dropdown-menu" aria-labelledby="dropdown01">
+<?php foreach($lesPays as $lesPays) : ?>
+<a class="dropdown-item" href="LesPays.php?name=<?= $lesPays->pays ; ?>"><?= $lesPays->pays; ?> </a>
+<?php endforeach ; ?>
+<a class="nav-link" href="Lepays.php"></a>
+</div>
+</li>
+
+
+
+
         
         
       </div>
