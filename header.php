@@ -58,6 +58,7 @@ overflow-y: auto;
         <li class="nav-item">
           <a class="nav-link" href="#">Langues</a>
           <a class="dropdown-item" href="Langues.php?continent=Link">Langues</a>
+         
 
         </li>
         <li class="nav-item">
@@ -84,9 +85,10 @@ $lesPays = getAllCountries();
 //var_dump($lesContinents);
 ?>
 <li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-
-toggle="dropdown" aria-haspopup="true"
-aria-expanded="false">Pays</a>
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="false">Pays</a>
+             <ul class="dropdown-menu">
+<li><a href="continets.php?name=Asia">Asie</a></li> </ul>
 <div class="dropdown-menu" aria-labelledby="dropdown01">
 <?php foreach($lesPays as $lesPays) : ?>
 <a class="dropdown-item" href="LesPays.php?name=<?= $lesPays->pays ; ?>"><?= $lesPays->pays; ?> </a>
@@ -94,8 +96,8 @@ aria-expanded="false">Pays</a>
 <a class="nav-link" href="Lepays.php"></a>
 </div>
 </li>
-
-
+          
+        
 
 
         
@@ -123,3 +125,4 @@ aria-expanded="false">Pays</a>
     </div>
   </nav>
 </header>
+

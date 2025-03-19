@@ -24,29 +24,60 @@ else{
 $continent = "Monde";
 $desPays = getAllCountries();
 }
+$detail = getinformationpays()
 ?>
 
 <?php
- echo "<h1>Les Pays" . $continent . "</h1>";?>
+ echo "<h1> Le Pays " . $pays . "</h1>";?>
    <div class="container">
     
     <div>
     <table id="example" class="table table-striped table-bordered" style="width:100%">
     <thead>
          <tr>
-           <th>Nom</th>
-           <th>Population</th>
+         <th> id</th> 
+         <th>Code</th> 
+         <th>Name</th>
+         <th>Continent</th> 
+         <th>Region</th> 
+         <th>SurfaceArea</th> 
+         <th>IndepYear</th> 
+         <th>Population</th>
+         <th>LifeExpectancy</th> 
+         <th>GNP</th> 
+         <th>GNPOld</th> 
+         <th> LocalName </th>
+         <th>GovernmentForm</th> 
+         <th>HeadOfState </th>
+         <th>Capital </th>
+         <th>Code2</th>
+
+           
            
          </tr>
         </thead>
         <tbody>
        <?php
-       // $desPays est un tableau dont les éléments sont des objets représentant
-       // des caractéristiques d'un pays (en relation avec les colonnes de la table Country)
-          foreach($desPays as $pays) : ?>
+       
+          foreach($detail as $detail) : ?>
           <tr>
-            <td> <?php echo $pays->Name ?></td> 
-            <
+            <td> <?php echo $detail->id ?></td>
+            <td> <?php echo $detail->Code ?></td> 
+            <td> <?php echo $detail->Name ?></td> 
+            <td> <?php echo $detail->Continent?></td> 
+            <td> <?php echo $detail->Region ?></td> 
+            <td> <?php echo $detail->SurfaceArea?></td> 
+            <td> <?php echo $detail->IndepYear ?></td> 
+            <td> <?php echo $detail->Population ?></td> 
+            <td> <?php echo $detail->LifeExpectancy ?></td> 
+            <td> <?php echo $detail->GNP ?></td> 
+            <td> <?php echo $detail->GNPOld ?></td> 
+            <td> <?php echo $detail->LocalName ?></td> 
+            <td> <?php echo $detail->GovernmentForm ?></td> 
+            <td> <?php echo $detail->HeadOfState ?></td> 
+            <td> <?php echo $detail->Capital?></td> 
+            <td> <?php echo $detail->Code2 ?></td>  
+            
             
 
           </tr>

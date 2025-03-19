@@ -24,25 +24,26 @@
  $continent = "Monde";
  $desPays = getAllCountries();
  }
+ $langues= getLangue();
  ?>
 
 
 <div class="container">
-    <h1>Les langues les plus parler </h1>
+    <h1> <strong>Langues les plus parlées</strong> </h1>
     <div>
      <table class="table">
          <tr>
-           <th>Nom</th>
-           <th>Position</th>
+           <th>Language</th>
+           <th>nb pays</th>
          </tr>
        <?php
        // $desPays est un tableau dont les éléments sont des objets représentant
        // des caractéristiques d'un pays (en relation avec les colonnes de la table Country)
-          foreach($desPays as $pays) { ?>
+          foreach($langues as $langue) { ?>
           <tr>
-            <td> <?php echo $pays->Name ?></td>
-            <td> <?php echo $pays->id ?></td>
-
+            <td> <?php echo $langue->Language?></td>
+            <td> <?php echo $langue->NombreDePays?></td>
+            
           </tr>
         <?php } ?>
     </table>

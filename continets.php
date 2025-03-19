@@ -27,7 +27,7 @@ $desPays = getAllCountries();
 ?>
 
 <?php
- echo "<h1>Les Pays" . $continent . "</h1>";?>
+ echo "<h1> Les Pays en  " . $continent . "</h1>";?>
    <div class="container">
     
     <div>
@@ -40,7 +40,6 @@ $desPays = getAllCountries();
            <th>Surface</th>
            <th>Region</th>
            <th>Capitale</th>
-           <th>Detail</th>
          </tr>
         </thead>
         <tbody>
@@ -49,14 +48,18 @@ $desPays = getAllCountries();
        // des caractéristiques d'un pays (en relation avec les colonnes de la table Country)
           foreach($desPays as $pays) : ?>
           <tr>
-            <td> <?php echo $pays->Name ?></td> 
-            <td> <?php echo $pays->Population ?></td>
-            <td> <?php echo $pays->HeadOfState ?></td>
-            <td> <?php echo $pays->SurfaceArea ?></td>
-            <td> <?php echo $pays->Region ?></td>
-            <td> <?php echo $pays->Capital ?></td>
-            <td><a href="details.php?country=<?php echo($pays->Name); ?>">Voir information</a></td>
-            </tr>
+          <tr>
+    
+    <td><a href="details.php?country=<?php echo urlencode($pays->Name); ?>"><?php echo $pays->Name; ?></a></td>
+    
+    <td><?php echo $pays->Population; ?></td>
+    <td><?php echo $pays->HeadOfState; ?></td>
+    <td><?php echo $pays->SurfaceArea; ?></td>
+    <td><?php echo $pays->Region; ?></td>
+    <td><?php echo $pays->Capital; ?></td>
+    
+</tr>
+
 
           </tr>
           <?php endforeach; ?>

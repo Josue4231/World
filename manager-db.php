@@ -70,6 +70,13 @@ return $pdo->query($query)->fetchAll();
 function getLangue()
 {
     global $pdo;
-    $querry = 'SELECT DISTINCT Name FROM Language;';
+    $query = 'SELECT l.Name AS Language, COUNT(DISTINCT cl.idCountry) AS NombreDePays FROM `CountryLanguage` cl JOIN `Language` l ON cl.idLanguage = l.id GROUP BY l.Name ORDER BY NombreDePays DESC;  ';
     return $pdo->query($query)->fetchAll();
+}
+function getinformationpays()
+{
+    global $pdo;
+    $query = "SELECT id, Code, Name, Continent, Region, SurfaceArea, IndepYear, Population, LifeExpectancy, GNP, GNPOld, LocalName, GovernmentForm, HeadOfState, Capital, Code2 FROM Country WHERE Code = 'X';";
+    return $pdo->query($query)->fetchAll();
+
 }
