@@ -66,16 +66,16 @@ overflow-y: auto;
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-             aria-expanded="false">Continent</a>
+             aria-expanded="false">Continents</a>
           
           <ul class="dropdown-menu">
-<li><a href="continets.php?name=Asia">Asie</a></li>
-<li><a href="continets.php?name=Europe">Europe</a></li> 
-<li><a href="continets.php?name=Africa">Afrique</a></li>
-<li><a href="continets.php?name=North America">Amérique du Nord</a></li>
-<li><a href="continets.php?name=South America">Amérique du Sud</a></li>
-<li><a href="continets.php?name=Oceania">Océanie</a></li>
-<li><a href="continets.php?name=Antarctica">Antartic</a></li>
+<li><a href="continents.php?name=Asia">Asie</a></li>
+<li><a href="continents.php?name=Europe">Europe</a></li> 
+<li><a href="continents.php?name=Africa">Afrique</a></li>
+<li><a href="continents.php?name=North America">Amérique du Nord</a></li>
+<li><a href="continents.php?name=South America">Amérique du Sud</a></li>
+<li><a href="continents.php?name=Oceania">Océanie</a></li>
+<li><a href="continents.php?name=Antarctica">Antartic</a></li>
 </ul>
 <?php
 require_once 'inc/manager-db.php';
@@ -84,18 +84,6 @@ $lesPays = getAllCountries();
 1
 //var_dump($lesContinents);
 ?>
-<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-             aria-expanded="false">Pays</a>
-             <ul class="dropdown-menu">
-<li><a href="continets.php?name=Asia">Asie</a></li> </ul>
-<div class="dropdown-menu" aria-labelledby="dropdown01">
-<?php foreach($lesPays as $lesPays) : ?>
-<a class="dropdown-item" href="LesPays.php?name=<?= $lesPays->pays ; ?>"><?= $lesPays->pays; ?> </a>
-<?php endforeach ; ?>
-<a class="nav-link" href="Lepays.php"></a>
-</div>
-</li>
           
         
 
