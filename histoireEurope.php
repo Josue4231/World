@@ -1,3 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidéo YouTube - Histoire de l'Europe</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        header {
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px 0;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        section.video {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin: 0 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #2C3E50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Histoire de L'Europe : </h1>
+        <p>La creation des pays <p>
+    </header>
+
+    <section class="video">
+        <h2>Vidéo : L'Histoire de l'Europe</h2>
+        <!-- Intégration de la vidéo YouTube -->
+        <iframe src="https://www.youtube.com/embed/yY9h0edVVPk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Histoire de L'Europe. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
+
 <?php
 /**
  * Fragment Header HTML page
@@ -80,7 +163,7 @@ overflow-y: auto;
           <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
              aria-expanded="false">Carte du monde</a>
              <ul class="dropdown-menu">
-<li><a href="carteAsie.php?name=Asia"> L'Asie</a><li>
+<li><a href="carteAsie.php?name=Asia"> Carte de L'Asie</a><li>
 <li><a href="carteEurope.php?name=Europe">Europe</a></li> 
 <li><a href="carteAfrique.php?name=Africa">Afrique</a></li>
 <li><a href="carteAmerique_Nord.php?name=North America">Amérique du Nord</a></li>
@@ -94,60 +177,4 @@ overflow-y: auto;
           <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
              aria-expanded="false">Histoire du monde </a>
              <ul class="dropdown-menu">
-<li><a href="histoireEurope.php?name=Europe">Europe</a></li>
-<li><a href="histoireAsie.php?name=Asie">Asie</a></li> 
-
-
-</ul>
-
-        
-<?php
-require_once 'inc/manager-db.php';
-$lesContinents = getContinent() ;
-$lesPays = getAllCountries();
-1
-//var_dump($lesContinents);
-?>
-
-<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-             aria-expanded="false">Pays</a>
-             <ul class="dropdown-menu">
-
-<div class="dropdown-menu" aria-labelledby="dropdown01">
-<?php foreach($lesPays as $lesPays) : ?>
-<a class="dropdown-item" href="detail.php?name=<?= $lesPays->pays ; ?>"><?= $lesPays->pays; ?> </a>
-<?php endforeach ; ?>
-<a class="nav-link" href="detail.php"></a>
-</div>
-</li>
-          
-        
-
-
-        
-        
-      </div>
-  </li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="register">Register</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="todo-projet.php">
-            Présentation-Atelier-de-Prof-SLAM
-          </a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-</header>
-
+<li><a href="histoireEurope.php?name=Europe">Europe</a></li> 

@@ -109,18 +109,6 @@ $lesPays = getAllCountries();
 //var_dump($lesContinents);
 ?>
 
-<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-             aria-expanded="false">Pays</a>
-             <ul class="dropdown-menu">
-
-<div class="dropdown-menu" aria-labelledby="dropdown01">
-<?php foreach($lesPays as $lesPays) : ?>
-<a class="dropdown-item" href="detail.php?name=<?= $lesPays->pays ; ?>"><?= $lesPays->pays; ?> </a>
-<?php endforeach ; ?>
-<a class="nav-link" href="detail.php"></a>
-</div>
-</li>
           
         
 
@@ -150,4 +138,14 @@ $lesPays = getAllCountries();
     </div>
   </nav>
 </header>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<img src="images/world1.png" alt="" weight=1000 height=800>
+</body>
+</html>
